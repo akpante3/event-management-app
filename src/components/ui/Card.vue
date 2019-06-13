@@ -11,7 +11,7 @@
       </div>
       <br>
       <div class="user">
-        <a 
+        <a
         v-on:click.prevent
         href="#" v-b-popover.html.focus.hover.top="popoverUserDetails" >
         <img src="http://www.gregoryherpe.fr/wp-content/themes/gregoryherpe2/includes/timthumb.php?src=http%3A%2F%2Fwww.gregoryherpe.fr%2Fwp-content%2Fuploads%2F2018%2F06%2FThe-Crown-Prince.jpg&w=900&h=1350&q=90" /></a>
@@ -30,26 +30,26 @@ export default {
   data() {},
   methods: {
     popoverUserDetails() {
-        // Both title and content specified as a function in this example
-        // and will be called each time popover is opened
-        // return {
-        //   html: true,
-        //   // title: () => {
-        //   //   return ``
-        //   // },
-        //   content: () => {
-        //     return ``
-        //   }
-        return `<div class="text-center pop-over" style="margin:20px">
+      // Both title and content specified as a function in this example
+      // and will be called each time popover is opened
+      // return {
+      //   html: true,
+      //   // title: () => {
+      //   //   return ``
+      //   // },
+      //   content: () => {
+      //     return ``
+      //   }
+      return `<div class="text-center pop-over" style="margin:20px">
          <img 
           class="mt-1 profile-img"
           src='http://www.gregoryherpe.fr/wp-content/themes/gregoryherpe2/includes/timthumb.php?src=http%3A%2F%2Fwww.gregoryherpe.fr%2Fwp-content%2Fuploads%2F2018%2F06%2FThe-Crown-Prince.jpg&w=900&h=1350&q=90'  
           width="70" height="70" style="border-radius: 500%"/>
          <p><strong>User</strong></p>
-        </div>`
-      }
-    }
-}
+        </div>`;
+    },
+  },
+};
 </script>
 
 <style scoped>

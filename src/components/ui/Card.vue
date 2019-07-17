@@ -1,6 +1,10 @@
 <template>
 <div class="card">
-    <div>
+    <div class="card-image">
+        <div class="card-image-info">
+          <button class="app-button "><i class="fas fa-heart"></i></button>
+          <button class="btn-vote-now app-button">Vote now</button>
+        </div>
         <img src="https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvYXNzZXRzLzMwYmE2YzI0OWZmNDY5Zjc4NF9TcGFsZGluZy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLWF1dG8tb3JpZW50ICJdLFsicCIsInRodW1iIiwiOTAweDYwMCswKzM4OCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA4MSAtYXV0by1vcmllbnQiXSxbInAiLCJ0aHVtYiIsIjc4MHg1MjAjIl1d/Spalding.jpg" />
     </div>
     <div class="details">
@@ -30,16 +34,6 @@ export default {
   data() {},
   methods: {
     popoverUserDetails() {
-      // Both title and content specified as a function in this example
-      // and will be called each time popover is opened
-      // return {
-      //   html: true,
-      //   // title: () => {
-      //   //   return ``
-      //   // },
-      //   content: () => {
-      //     return ``
-      //   }
       return `<div class="text-center pop-over" style="margin:20px">
          <img 
           class="mt-1 profile-img"
@@ -54,16 +48,58 @@ export default {
 
 <style scoped>
 .card {
-    box-sizing: border-box;
-    height: 400px;
-    display: grid;
-    grid-template-rows: 60% 40%;
-    border: none
+  box-sizing: border-box;
+  height: 400px;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  border: none;
+  overflow: hidden;
+}
+.card-image {
+  height: 240px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
 }
 img {
-  width: 100%; /* or any custom size */
+  transition: 1s;
+}
+.card .card-image img {
+  width: 100%;
   height: 100%;
 }
+.card-image .card-image-info {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.card-image:hover .card-image-info {
+  opacity: 1;
+}
+.app-button {
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 200;
+  border: none;
+  transition: 1s;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-vote-now {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  padding: 10px;
+  width: 100px;
+}
+.card .card-image:hover img {
+  transform: scale(1.3);
+}
+
 .user {
   padding-top: 5px;
   border-top: 1px solid #f4f7f6;
@@ -84,7 +120,7 @@ p {
 }
 .details-header {
   font-size: 16px;
-  font-weight: 600
+  font-weight: 500
 }
 .profile-img {
   border-radius: 500%

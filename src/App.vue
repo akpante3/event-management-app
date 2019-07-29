@@ -20,7 +20,7 @@
         <div :class="{'modal-mask': showSideBar}" @click="toggleSideBar" />
         <div :class="{'disable-div': showSideBar}">
           <div class="nav-bar">
-          <NavBar />  
+          <NavBar />
           </div>
              <router-view></router-view>
           <Footer />
@@ -46,7 +46,7 @@ export default {
     SideBar,
     AuthModal,
     ChatIcon,
-    ChatBox
+    ChatBox,
   },
   data() {
     return {
@@ -66,7 +66,7 @@ export default {
     },
     toggleChatBox() {
       this.openChat = !this.openChat;
-    }
+    },
   },
 };
 </script>
@@ -79,7 +79,7 @@ div {
   position: absolute;
   margin-left: 75%;
   height: 100%;
-  pointer-events:none; 
+  pointer-events:none;
 }
 div .chat-icon {
   margin-left: 260px;

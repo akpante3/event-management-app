@@ -1,7 +1,6 @@
 <template>
 <div class="chat-box">
   <div class="chat-box-header">
-      
   </div>
   <div class="chat-section">
     <div class="chat-dialog">hi! am dave</div>
@@ -14,8 +13,6 @@
 </template>
 
 <script>
-
-
 export default {
   name: 'ChatBox',
   components: {},

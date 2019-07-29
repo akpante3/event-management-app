@@ -12,11 +12,12 @@
 <script>
 import SingleItemHeader from './SingleItemHeader';
 import SingleItemDisplay from './SingleItemDisplay';
+
 export default {
   name: 'SingleItem',
   components: {
     SingleItemHeader,
-    SingleItemDisplay
+    SingleItemDisplay,
   },
   data() {
     return {};
@@ -34,5 +35,6 @@ export default {
 .item-header {
     margin-bottom: 30px;
 }
+
 
 </style>

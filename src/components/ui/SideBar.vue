@@ -8,8 +8,8 @@
       <li><p>Home</p></li>
       <li><p>Winner</p></li>
       <li><p>Noinee's</p></li>
-      <li><p>Register/Login</p></li>
-      <li><p>Home</p></li>
+      <li><p>People</p></li>
+      <li><p>Magazine</p></li>
       <li><p>Winner</p></li>
       <li><p>Noinee's</p></li>
     </ul>

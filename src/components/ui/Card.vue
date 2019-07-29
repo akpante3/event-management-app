@@ -2,16 +2,21 @@
 <div class="card">
     <div class="card-image">
         <div class="card-image-info">
-          <button class="app-button "><i class="fas fa-heart"></i></button>
-          <button class="btn-vote-now app-button">Vote now</button>
+          <button @click="toggleLike" class="app-button ">
+            <i :class="['fas', 'fa-heart', {'item-liked': liked }]"></i><span class="num-of-likes">{{numOfLikes}}</span>
+          </button>
+          <button
+            class="btn-vote-now app-button"
+            @click="$router.push('/single-item')"
+          >Vote now</button>
         </div>
         <img src="https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvYXNzZXRzLzMwYmE2YzI0OWZmNDY5Zjc4NF9TcGFsZGluZy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLWF1dG8tb3JpZW50ICJdLFsicCIsInRodW1iIiwiOTAweDYwMCswKzM4OCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA4MSAtYXV0by1vcmllbnQiXSxbInAiLCJ0aHVtYiIsIjc4MHg1MjAjIl1d/Spalding.jpg" />
     </div>
     <div class="details">
       <h3><a class="details-header mt-2">Product technology</a></h3>
       <div class="col-md-12 zone">
-            <a>From Czech Republic</a>
-            <a class="text-right">February 05, 2019</a>
+          <a>From Czech Republic</a>
+          <a class="text-right">February 05, 2019</a>
       </div>
       <br>
       <div class="user">
@@ -31,8 +36,18 @@
 export default {
   name: 'Footer',
   components: {},
-  data() {},
+  data() {
+    return {
+      liked: false,
+      numOfLikes: 1,
+    };
+  },
   methods: {
+    toggleLike() {
+      const likesCount = this.liked ? this.numOfLikes - 1 : this.numOfLikes + 1;
+      this.liked = !this.liked;
+      this.numOfLikes = likesCount;
+    },
     popoverUserDetails() {
       return `<div class="text-center pop-over" style="margin:20px">
          <img 
@@ -96,6 +111,9 @@ img {
   padding: 10px;
   width: 100px;
 }
+.btn-vote-now:hover {
+   color: #d1d1d1
+}
 .card .card-image:hover img {
   transform: scale(1.3);
 }
@@ -132,6 +150,12 @@ p {
   display: grid;
   grid-template-columns: 2fr 2fr
 }
+.item-liked {
+  color: red;
+}
 
+.num-of-likes {
+  margin-left: 4px;
+}
   /* TRANSITION */
 </style>

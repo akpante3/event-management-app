@@ -9,27 +9,37 @@
           </div>
           <div class="single-item-author">by HAUS (United States)</div>
           <div class="single-item-details">We’re HAUS, an award-winning creative digital studio in
-            Los Angeles. As pixel perfectionists we honed our skills and hardened our resolve to make the best damn magic on the internet.
+            Los Angeles. As pixel perfectionists we honed our skills and hardened our resolve
+            to make the best damn magic on the internet.
           </div>
           <div class="single-item-categories">
-              <div class="single-item-category" v-for="catergory in categories" :key="catergory"> {{catergory}} </div>
-          </div> 
+              <div
+                class="single-item-category"
+                v-for="catergory in categories"
+                :key="catergory"
+              >
+              {{catergory}}
+              </div>
+          </div>
       </div>
       <div class="user-vote">
-
+         <UserVotes />
       </div>
     </div>
 </template>
 
 <script>
+import UserVotes from './UserVotes';
 
 export default {
   name: 'SingleItem',
-  components: {},
+  components: {
+    UserVotes,
+  },
   data() {
     return {
-      categories: [ 'People', 'Magazines', 'Health', 'Season', 'interContinental',
-      'People', 'Magazines', 'Health', 'Season', 'interContinental' ]
+      categories: ['People', 'Magazines', 'Health', 'Season', 'interContinental',
+        'People', 'Magazines', 'Health', 'Season', 'interContinental'],
     };
   },
 };
@@ -100,9 +110,9 @@ export default {
   font-weight: 300;
 }
 .user-vote {
-  margin-top: 50px;
+  margin: 50px 0px;
   background-color: white;
-  height: 400px;
+  height: inline-block;
   width: 100%;
 }
 </style>

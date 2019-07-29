@@ -2,12 +2,13 @@
     <div class="single-page-header">
       <div class="single-item-header">
           <div>Nominees / HAUS Studio Website from United States</div>
-          <div class="single-header-right"> 
+          <div class="single-header-right">
             <div class="user-image" v-for="image in images" :key="image">
               <img :src=image alt="Smiley">
             </div>
             <button class="single-header-button" @click="toggleLike">
-              <i :class="['fas', 'fa-heart', {'item-liked': liked }]"></i><span class="num-of-likes">{{numOfLikes}}</span>
+              <i :class="['fas', 'fa-heart', {'item-liked': liked }]"></i>
+              <span class="num-of-likes">{{numOfLikes}}</span>
             </button>
             <button class="single-header-button">
               collect
@@ -35,12 +36,12 @@ export default {
     };
   },
   methods: {
-    toggleLike () {
+    toggleLike() {
       const likesCount = this.liked ? this.numOfLikes - 1 : this.numOfLikes + 1;
       this.liked = !this.liked;
       this.numOfLikes = likesCount;
-    }
-  }
+    },
+  },
 };
 </script>
 

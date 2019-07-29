@@ -17,11 +17,13 @@ export default {
   },
   methods: {
     toggleChatBox() {
-      this.openChat ? this.chatIcon = '<i class="far fa-comments "></i>' : this.chatIcon = '<span>&#10005;</span>'
-      this.$parent.toggleChatBox()
-    }
+      const chatIcon = this.openChat ? this.chatIcon = '<i class="far fa-comments "></i>'
+        : this.chatIcon = '<span>&#10005;</span>';
+      this.$parent.toggleChatBox();
+      return chatIcon;
+    },
   },
-  props: ['openChat']
+  props: ['openChat'],
 };
 </script>
 
@@ -29,7 +31,6 @@ export default {
 .chat-Icon-wrapper {
   /* position: -webkit-sticky; /* Safari & IE */
   position: sticky;
-
 }
 .class-icon {
   width: 60px;
@@ -45,7 +46,7 @@ export default {
 }
 
 .class-icon:hover {
-  background-color: white; 
+  background-color: white;
   color: #48c5b6;
 }
 

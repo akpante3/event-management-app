@@ -111,6 +111,7 @@ div .chat-box {
   transform: translateX(0) !important;
   transition: transform 0.3s;
   position: relative;
+  min-width: 1000px;
 }
 .modal-mask {
   position: fixed;

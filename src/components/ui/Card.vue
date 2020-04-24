@@ -3,7 +3,8 @@
     <div class="card-image">
         <div class="card-image-info">
           <button @click="toggleLike" class="app-button ">
-            <i :class="['fas', 'fa-heart', {'item-liked': liked }]"></i><span class="num-of-likes">{{numOfLikes}}</span>
+          <i :class="['fas', 'fa-heart', {'item-liked': liked }]">
+            </i><span class="num-of-likes">{{numOfLikes}}</span>
           </button>
           <button
             class="btn-vote-now app-button"
@@ -23,7 +24,7 @@
         <a
         v-on:click.prevent
         href="#" v-b-popover.html.focus.hover.top="popoverUserDetails" >
-        <img src="http://www.gregoryherpe.fr/wp-content/themes/gregoryherpe2/includes/timthumb.php?src=http%3A%2F%2Fwww.gregoryherpe.fr%2Fwp-content%2Fuploads%2F2018%2F06%2FThe-Crown-Prince.jpg&w=900&h=1350&q=90" /></a>
+        <img src="https://cdn.domestika.org/c_fill,dpr_1.0,h_1200,t_base_params.format_jpg,w_1200/v1546529981/project-covers/000/458/388/458388-original.jpg?1546529981" /></a>
          <a>BY Akpante</a>
       </div>
     </div>
@@ -77,7 +78,7 @@ export default {
   position: relative;
 }
 img {
-  transition: 1s;
+  transition: 0.5s;
 }
 .card .card-image img {
   width: 100%;
@@ -100,7 +101,7 @@ img {
   font-size: 14px;
   font-weight: 200;
   border: none;
-  transition: 1s;
+  transition: 0.5s;
   cursor: pointer;
   font-weight: 600;
 }

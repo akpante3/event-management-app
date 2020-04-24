@@ -1,27 +1,29 @@
 <template>
-<div class="">
-    <div class="auth-modal-mask">
-        <span class="auth-close-btn" @click="toggleAuthModal">&#10005;</span>
-        <div class="auth-modal">
-           <div class="auth-content">
-               <div class="register-now">Register now</div>
-               <input type="text" placeholder="Email">
-               <input type="text" placeholder="Password">
-               <div class="auth-submit-btn">Submit</div>
-               <div class="forgot-password">Forgot Password?</div>
-           </div>
-        </div>
-    </div>
-</div>
+  <div class="">
+      <div class="auth-modal-mask">
+          <span class="auth-close-btn" @click="toggleAuthModal">&#10005;</span>
+          <div class="auth-modal">
+            <div class="auth-content">
+                <div class="register-now">Register now</div>
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <div class="auth-submit-btn">Submit</div>
+                <div class="forgot-password">Forgot Password?</div>
+            </div>
+          </div>
+      </div>
+  </div>
 </template>
 
 <script>
-
-
 export default {
   name: 'AuthModal',
   components: {},
-  data() {},
+  data() {
+    return {
+
+    };
+  },
   methods: {
     toggleAuthModal() {
       this.$parent.toggleAuthModal();
@@ -57,7 +59,7 @@ export default {
   position: absolute;
   top: 10%;
   padding: 80px;
-  animation: modalMask 4s ease forwards;
+  animation: modalMask 1.5s ease forwards;
 }
 
 .auth-modal-mask .auth-modal input {

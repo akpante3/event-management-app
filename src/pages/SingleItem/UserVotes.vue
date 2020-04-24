@@ -8,7 +8,7 @@
       <div class="user-vote-location">United State</div>
     </div>
     <div class="voting-grades">
-      <div v-for="rating in userRatings" :key="rating" class="performance-rating">
+      <div v-for="(rating, index) in userRatings" :key="index" class="performance-rating">
         <PerformanceMeter
           :color="rating.color"
           :strokeOffset="rating.strokeOffset"

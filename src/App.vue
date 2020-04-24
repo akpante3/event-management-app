@@ -1,33 +1,33 @@
 <template>
-<div :class="['app', {'disable-page': showSideBar || showAuthModal}]">
-  <div :class="{'dont-display': !showAuthModal}">
-    <AuthModal />
-  </div>
-  <div class="chat-app-wrapper">
-    <div :class="['chat-box',{'dont-display':!openChat}]">
-       <ChatBox />
+  <div :class="['app', {'disable-page': showSideBar || showAuthModal}]">
+    <div v-show="showAuthModal">
+      <AuthModal />
     </div>
-    <div :class="['chat-icon', {'chat-icon-right': !openChat, 'chat-icon-left': openChat}]" >
-      <ChatIcon :openChat="openChat" />
-    </div>
-  </div>
-  <div :class="['wrapper', {'App-components': showSideBar}]">
-      <div class="side-bar" v-if="showSideBar" >
-          <SideBar/>
+    <div class="chat-app-wrapper">
+      <div :class="['chat-box',{'dont-display':!openChat}]">
+        <ChatBox />
       </div>
-      <div>
-        <!-- black-overlay -->
-        <div :class="{'modal-mask': showSideBar}" @click="toggleSideBar" />
-        <div :class="{'disable-div': showSideBar}">
-          <div class="nav-bar">
-          <NavBar />
-          </div>
-             <router-view></router-view>
-          <Footer />
+      <div :class="['chat-icon', {'chat-icon-right': !openChat, 'chat-icon-left': openChat}]" >
+        <ChatIcon :openChat="openChat" />
+      </div>
+    </div>
+    <div :class="['wrapper', {'App-components': showSideBar}]">
+        <div class="side-bar" v-show="showSideBar" >
+            <SideBar/>
         </div>
-      </div>
+        <div>
+          <!-- black-overlay -->
+          <div :class="{'modal-mask': showSideBar}" @click="toggleSideBar" />
+          <div :class="{'disable-div': showSideBar}">
+            <div class="nav-bar">
+            <NavBar />
+            </div>
+              <router-view></router-view>
+            <Footer />
+          </div>
+        </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -62,6 +62,7 @@ export default {
       this.showSideBar = !this.showSideBar;
     },
     toggleAuthModal() {
+      // console.log('click')
       this.showAuthModal = !this.showAuthModal;
     },
     toggleChatBox() {
@@ -73,7 +74,7 @@ export default {
 
 <style>
 div {
-  transition: 1s;
+  transition: 0.5s;
 }
 .chat-app-wrapper {
   position: absolute;
@@ -124,7 +125,7 @@ div .chat-box {
   opacity: 0;
   transition: opacity 0.2s;
   overflow: hidden;
-  animation: modalMask 4s ease forwards;
+  animation: modalMask 1.5s ease forwards;
 }
 
 @keyframes modalMask {
@@ -134,6 +135,7 @@ div .chat-box {
 
 div .wrapper {
   transition: 1s;
+  min-width: 1000px;
 }
 .App-components {
   display:grid;
@@ -143,7 +145,7 @@ div .wrapper {
 
 .side-bar {
   width: 0%;
-  animation: body 2s ease forwards;
+  animation: body 1.5s ease forwards;
 }
 @keyframes body {
   0%{ width: 0% }

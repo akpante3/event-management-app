@@ -15,8 +15,8 @@
           <div class="single-item-categories">
               <div
                 class="single-item-category"
-                v-for="catergory in categories"
-                :key="catergory"
+                v-for="(catergory, index) in categories"
+                :key="index"
               >
               {{catergory}}
               </div>
@@ -105,7 +105,7 @@ export default {
   font-size: 14px;
   padding: 5px 15px;
   font-weight: 200;
-  transition: 1s;
+  transition: 0.5s;
   cursor: pointer;
   font-weight: 300;
 }

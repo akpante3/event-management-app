@@ -46,9 +46,9 @@ export default {
   position: fixed;
   background-color: none;
   transform: translateX(0) !important;
-  transition: transform 2s;
+  transition: transform 1s;
   overflow: hidden;
-  transition: 1s;
+  transition: 0.5s;
 }
 ul {
  text-decoration: none !important;

@@ -29,7 +29,9 @@ export default {
 
   },
   data() {
+    return {
 
+    };
   },
 
 };
@@ -39,6 +41,7 @@ export default {
 .footer {
   background-color: white;
   padding: 3rem;
+  min-width: 100px;
 }
 h5 {
   display: inline-block;

@@ -16,7 +16,11 @@
 export default {
   name: 'ChatBox',
   components: {},
-  data() {},
+  data() {
+    return {
+
+    };
+  },
 };
 </script>
 
@@ -46,7 +50,7 @@ export default {
   height: 300px;
   border: 1px solid #dbdbdb;
   border-radius: 10px;
-  transition: 1s;
+  transition: 0.5s;
   display: grid;
   grid-template-rows: 1fr 6fr 0.8fr;
 }

@@ -38,7 +38,7 @@ export default {
   grid-column-gap: 2em;
   grid-row-gap: 1.5em;
   position: relative;
-  animation: landingPage 3s ease forwards;
+  animation: landingPage 1.5s ease forwards;
 }
 
 @keyframes landingPage {

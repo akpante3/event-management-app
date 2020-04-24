@@ -3,7 +3,7 @@
       <div class="single-item-header">
           <div>Nominees / HAUS Studio Website from United States</div>
           <div class="single-header-right">
-            <div class="user-image" v-for="image in images" :key="image">
+            <div class="user-image" v-for="(image, index) in images" :key="index">
               <img :src=image alt="Smiley">
             </div>
             <button class="single-header-button" @click="toggleLike">
@@ -26,9 +26,9 @@ export default {
   data() {
     return {
       images: [
-        'http://www.sclance.com/images/men/Men_620533.png',
+        'https://images-na.ssl-images-amazon.com/images/I/81YTwEmFUDL._UX385_.jpg',
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd7ygCckpibbZesJ990AiX0DgBFyi5QhehN4wORRPx9tsmEqiVzw',
-        'http://www.sclance.com/images/men/Men_620533.png',
+        'https://cdn.domestika.org/c_fill,dpr_1.0,h_1200,t_base_params.format_jpg,w_1200/v1546529981/project-covers/000/458/388/458388-original.jpg?1546529981',
         'https://images-na.ssl-images-amazon.com/images/I/81YTwEmFUDL._UX385_.jpg',
       ],
       liked: false,
@@ -49,7 +49,7 @@ export default {
 .single-page-header {
   width: 100%;
   margin: 0px;
-  animation: singlePageHeader 3s ease forwards;
+  animation: singlePageHeader 1.5s ease forwards;
 }
 @keyframes singlePageHeader {
   0%{ margin: 60px 400px 400px 600px;}
@@ -83,7 +83,7 @@ export default {
   font-size: 14px;
   padding: 5px;
   font-weight: 200;
-  transition: 1s;
+  transition: 0.5s;
   cursor: pointer;
   font-weight: 300;
   outline: none;

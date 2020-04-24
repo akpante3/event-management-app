@@ -32,7 +32,9 @@
 export default {
   name: 'Footer',
   components: {},
-  data() {},
+  data() {
+    return {};
+  },
   props: ['color', 'strokeOffset', 'itemRating'],
 };
 </script>

@@ -53,7 +53,7 @@ export default {
       return `<div class="text-center pop-over" style="margin:20px">
          <img 
           class="mt-1 profile-img"
-          src='http://www.gregoryherpe.fr/wp-content/themes/gregoryherpe2/includes/timthumb.php?src=http%3A%2F%2Fwww.gregoryherpe.fr%2Fwp-content%2Fuploads%2F2018%2F06%2FThe-Crown-Prince.jpg&w=900&h=1350&q=90'  
+          src='https://cdn.domestika.org/c_fill,dpr_1.0,h_1200,t_base_params.format_jpg,w_1200/v1546529981/project-covers/000/458/388/458388-original.jpg?1546529981'  
           width="70" height="70" style="border-radius: 500%"/>
          <p><strong>User</strong></p>
         </div>`;

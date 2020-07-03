@@ -31,6 +31,8 @@ export default {
 }
 .single-item {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .item-header {
     margin-bottom: 30px;

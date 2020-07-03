@@ -4,12 +4,12 @@
       <AuthModal />
     </div>
     <div class="chat-app-wrapper">
-      <div :class="['chat-box',{'dont-display':!openChat}]">
-        <ChatBox />
-      </div>
-      <div :class="['chat-icon', {'chat-icon-right': !openChat, 'chat-icon-left': openChat}]" >
-        <ChatIcon :openChat="openChat" />
-      </div>
+        <div :class="['chat-box',{'dont-display':!openChat}]">
+          <ChatBox />
+        </div>
+        <div :class="['chat-icon', {'chat-icon-right': !openChat, 'chat-icon-left': openChat}]" >
+          <ChatIcon :openChat="openChat" />
+        </div>
     </div>
     <div :class="['wrapper', {'App-components': showSideBar}]">
         <div class="side-bar" v-show="showSideBar" >
@@ -78,9 +78,10 @@ div {
 }
 .chat-app-wrapper {
   position: absolute;
-  margin-left: 75%;
+  right: 5%;
   height: 100%;
-  pointer-events:none;
+  pointer-events: none;
+  z-index:10;
 }
 div .chat-icon {
   margin-left: 260px;
@@ -88,6 +89,9 @@ div .chat-icon {
   position: sticky;
   z-index:2;
   pointer-events:auto;
+}
+@media (max-width: 1024px) {
+
 }
 div .chat-box {
   position: sticky;

@@ -158,5 +158,14 @@ p {
 .num-of-likes {
   margin-left: 4px;
 }
+@media (max-width: 420px) {
+  .card { 
+    height: 700px;
+  }
+  .card-image {
+      height: 100%;
+  }
+}
+
   /* TRANSITION */
 </style>
